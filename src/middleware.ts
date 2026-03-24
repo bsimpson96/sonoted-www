@@ -19,9 +19,20 @@ function getClientIp(request: Request): string {
   );
 }
 
+// Canonical host -- all other domains redirect here
+const CANONICAL_HOST = 'sonoted.ai';
+const REDIRECT_HOSTS = new Set(['www.sonoted.ai', 'sonoted.app', 'www.sonoted.app']);
+
 export const onRequest = defineMiddleware((context, next) => {
   const { request } = context;
   const url = new URL(request.url);
+
+  // Host-based redirects: www.sonoted.ai, sonoted.app, www.sonoted.app → sonoted.ai
+  const host = request.headers.get('host') ?? url.hostname;
+  if (REDIRECT_HOSTS.has(host)) {
+    const target = `https://${CANONICAL_HOST}${url.pathname}${url.search}`;
+    return Response.redirect(target, 301);
+  }
 
   if (request.method === 'POST' && url.pathname === '/api/invite') {
     const ip = getClientIp(request);
