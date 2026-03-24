@@ -1,12 +1,10 @@
 ---
 import Base from '../layouts/Base.astro';
-import Hero from '../components/Hero.astro';
 import { InviteSection } from '../components/InviteSection';
 ---
 
-<Base>
-  <Hero />
-  <section class="px-4 py-24">
+<Base title="Invite — SoNoted">
+  <main class="flex min-h-screen items-center justify-center px-4 py-24">
     <InviteSection client:load />
-  </section>
+  </main>
 </Base>
