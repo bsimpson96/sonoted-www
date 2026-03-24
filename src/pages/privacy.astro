@@ -1,0 +1,211 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="Privacy Policy — SoNoted"
+  description="How SoNoted collects, uses, and protects your information."
+>
+  <div class="page">
+    <div class="content">
+      <h1 class="title">Privacy Policy</h1>
+      <p class="meta">Effective date: March 24, 2026</p>
+
+      <p>
+        SoNoted (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) operates the marketing
+        site at sonoted.ai. This policy explains what information we collect, how we use it, and
+        your rights regarding that information.
+      </p>
+
+      <h2>What we collect</h2>
+      <p>We collect only what is necessary to operate this site.</p>
+      <ul>
+        <li>
+          <strong>Email address.</strong> When you submit the early access form, we store your email
+          address on our waitlist. We use it to contact you about early access and product updates.
+          We do not send marketing email to anyone who has not opted in.
+        </li>
+        <li>
+          <strong>IP address.</strong> Your IP address is used to enforce rate limits on form
+          submissions (maximum 3 per hour per IP). It is held in memory for up to one hour and is
+          never written to a database or log file.
+        </li>
+      </ul>
+      <p>
+        We do not use cookies, tracking pixels, browser fingerprinting, or third-party analytics on
+        this site.
+      </p>
+
+      <h2>Sub-processors</h2>
+      <p>We rely on the following third parties to operate this site:</p>
+      <ul>
+        <li>
+          <strong>Resend</strong> (resend.com) &mdash; transactional email delivery. Your email
+          address is transmitted to Resend when you join the waitlist. Resend&rsquo;s privacy policy
+          is available at resend.com/legal/privacy-policy.
+        </li>
+        <li>
+          <strong>Railway</strong> (railway.app) &mdash; cloud hosting and infrastructure. All
+          server-side processing occurs on Railway. Railway&rsquo;s privacy policy is available at
+          railway.app/legal/privacy.
+        </li>
+      </ul>
+
+      <h2>How we use your information</h2>
+      <ul>
+        <li>To notify you when early access is available</li>
+        <li>To send occasional product updates (you can unsubscribe at any time)</li>
+        <li>To prevent abuse of our invite form</li>
+      </ul>
+      <p>We do not sell, rent, or share your personal information with any third party for their own marketing purposes.</p>
+
+      <h2>Data retention</h2>
+      <p>
+        We retain waitlist email addresses until you request deletion or until the waitlist is no
+        longer active. IP addresses used for rate limiting are held in memory for up to one hour and
+        are never persisted.
+      </p>
+
+      <h2>Your rights under CCPA (California residents)</h2>
+      <p>
+        If you are a California resident, the California Consumer Privacy Act (CCPA) gives you
+        specific rights regarding your personal information.
+      </p>
+      <ul>
+        <li>
+          <strong>Right to know.</strong> You may request a copy of the personal information we have
+          collected about you.
+        </li>
+        <li>
+          <strong>Right to delete.</strong> You may request that we delete your personal
+          information. We will honor deletion requests within 45 days.
+        </li>
+        <li>
+          <strong>Right to opt out of sale.</strong> We do not sell personal information. There is
+          nothing to opt out of.
+        </li>
+        <li>
+          <strong>Right to non-discrimination.</strong> We will not discriminate against you for
+          exercising any of these rights.
+        </li>
+      </ul>
+
+      <h2>Your rights under GDPR (EEA and UK residents)</h2>
+      <p>
+        If you are located in the European Economic Area or the United Kingdom, the General Data
+        Protection Regulation (GDPR) gives you additional rights.
+      </p>
+      <p>
+        <strong>Lawful basis.</strong> We process your email address on the basis of your consent,
+        given when you submit the early access form. You may withdraw consent at any time by
+        contacting us.
+      </p>
+      <p>You have the right to:</p>
+      <ul>
+        <li><strong>Access</strong> the personal data we hold about you</li>
+        <li><strong>Rectify</strong> inaccurate data</li>
+        <li><strong>Erase</strong> your data (&ldquo;right to be forgotten&rdquo;)</li>
+        <li><strong>Restrict</strong> or <strong>object</strong> to our processing</li>
+        <li><strong>Data portability</strong> &mdash; receive your data in a machine-readable format</li>
+      </ul>
+      <p>
+        <strong>International transfers.</strong> Our infrastructure is hosted in the United States.
+        If you are located in the EEA or UK, your data is transferred to and processed in the US.
+        We rely on Standard Contractual Clauses where required.
+      </p>
+      <p>
+        You have the right to lodge a complaint with your local data protection authority.
+      </p>
+
+      <h2>Children</h2>
+      <p>
+        This site is not directed at children under 13. We do not knowingly collect personal
+        information from children under 13. If you believe we have done so, contact us and we will
+        delete it promptly.
+      </p>
+
+      <h2>Changes to this policy</h2>
+      <p>
+        We may update this policy as the product evolves. Material changes will be noted by
+        updating the effective date above. We will not retroactively weaken privacy protections
+        without notice.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        To exercise any of your rights or to ask questions about this policy, contact us at
+        <a href="mailto:privacy@sonoted.ai">privacy@sonoted.ai</a>.
+      </p>
+    </div>
+  </div>
+</Base>
+
+<style>
+  .page {
+    min-height: 100vh;
+    padding: 6rem 1.5rem 4rem;
+  }
+
+  .content {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .title {
+    font-family: var(--font-display);
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--color-text-primary);
+    letter-spacing: -0.02em;
+    margin: 0 0 0.5rem;
+  }
+
+  .meta {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin: 0 0 2.5rem;
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    letter-spacing: -0.01em;
+    margin: 2.5rem 0 0.75rem;
+  }
+
+  p {
+    color: var(--color-text-secondary);
+    font-size: 0.9375rem;
+    line-height: 1.75;
+    margin: 0 0 1rem;
+  }
+
+  ul {
+    color: var(--color-text-secondary);
+    font-size: 0.9375rem;
+    line-height: 1.75;
+    margin: 0 0 1rem;
+    padding-left: 1.5rem;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  strong {
+    color: var(--color-text-primary);
+    font-weight: 600;
+  }
+
+  a {
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  a:hover {
+    color: var(--color-text-primary);
+  }
+</style>

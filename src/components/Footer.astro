@@ -1,0 +1,57 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="inner">
+    <span class="copy">&copy; {year} SoNoted. All rights reserved.</span>
+    <nav class="links" aria-label="Footer">
+      <a href="/privacy">Privacy Policy</a>
+    </nav>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    border-top: 1px solid var(--color-border);
+    padding: 2rem 1.5rem;
+  }
+
+  .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: center;
+  }
+
+  @media (min-width: 640px) {
+    .inner {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+  }
+
+  .copy {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+  }
+
+  .links {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .links a {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    transition: color 150ms ease;
+  }
+
+  .links a:hover {
+    color: var(--color-text-secondary);
+  }
+</style>
