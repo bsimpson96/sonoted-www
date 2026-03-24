@@ -1,0 +1,112 @@
+---
+import Section from './ui/Section.astro';
+---
+
+<Section id="use-cases">
+  <div class="header">
+    <h2 class="heading">Sounds familiar.</h2>
+    <p class="subheading">Here's how SoNoted changes the moment.</p>
+  </div>
+
+  <div class="cases">
+    <div class="case">
+      <div class="case-label">The proposal that writes itself</div>
+      <p class="case-body">
+        You're about to send a proposal to a client. SoNoted surfaces every note from your past two
+        calls, the concerns they mentioned, the budget range they hinted at — all without you asking.
+        Your proposal sounds like you actually listened. Because you did.
+      </p>
+    </div>
+
+    <div class="case">
+      <div class="case-label">Two years of research, on demand</div>
+      <p class="case-body">
+        You've been collecting notes on a topic for years across three different apps. Ask SoNoted a
+        question. It synthesizes an answer from your own thinking — not the internet's. The
+        connections you made at 2am in 2022 show up exactly when you need them.
+      </p>
+    </div>
+
+    <div class="case">
+      <div class="case-label">"I know I wrote this down somewhere"</div>
+      <p class="case-body">
+        You remember the idea. You don't remember when, where, or what you called it. Type a
+        fragment — a feeling, a phrase, half a concept. SoNoted finds it. Every time.
+      </p>
+    </div>
+  </div>
+</Section>
+
+<style>
+  .header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .heading {
+    font-family: var(--font-display);
+    font-size: 1.875rem;
+    font-weight: 800;
+    color: var(--color-text-primary);
+    letter-spacing: -0.02em;
+    margin: 0 0 0.75rem;
+  }
+
+  @media (min-width: 768px) {
+    .heading {
+      font-size: 2.25rem;
+    }
+  }
+
+  .subheading {
+    font-size: 1.0625rem;
+    color: var(--color-text-secondary);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .cases {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .cases {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .case {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 0.75rem;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+    transition:
+      border-color 200ms ease,
+      box-shadow 200ms ease;
+  }
+
+  .case:hover {
+    border-color: var(--color-accent);
+    box-shadow: 0 8px 32px var(--color-accent-glow);
+  }
+
+  .case-label {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    letter-spacing: -0.01em;
+  }
+
+  .case-body {
+    font-size: 0.9375rem;
+    color: var(--color-text-secondary);
+    margin: 0;
+    line-height: 1.7;
+  }
+</style>

@@ -2,12 +2,14 @@
 import Base from '../layouts/Base.astro';
 import Hero from '../components/Hero.astro';
 import Features from '../components/Features.astro';
+import UseCases from '../components/UseCases.astro';
 import { InviteSection } from '../components/InviteSection';
 ---
 
 <Base>
   <Hero />
   <Features />
+  <UseCases />
   <section class="px-4 py-24">
     <InviteSection client:load />
   </section>
