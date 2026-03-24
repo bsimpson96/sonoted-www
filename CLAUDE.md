@@ -1,6 +1,6 @@
 # sonoted-www
 
-Marketing site for SoNoted at sonoted.ai. Built with Astro 6 + React islands + Tailwind CSS v4. Deployed on Vercel.
+Marketing site for SoNoted at sonoted.ai. Built with Astro 6 + React islands + Tailwind CSS v4. Deployed on Railway.
 
 ## Quickstart
 
@@ -12,7 +12,7 @@ pnpm dev
 
 ## Architecture
 
-- **Astro 6 static output** -- pages are statically generated. API routes (`src/pages/api/`) require adding `export const prerender = false` to opt into SSR per-route.
+- **Astro 6 + Node adapter** -- `@astrojs/node` in standalone mode. Static pages are pre-rendered; API routes (`src/pages/api/`) add `export const prerender = false` to opt into SSR. Production entry point: `node dist/server/entry.mjs`.
 - **React islands** -- interactive components (invite form, animations) use `client:load` or `client:visible`. Everything else is Astro (zero JS by default).
 - **Tailwind CSS v4** -- configured via `@tailwindcss/vite` (no `tailwind.config.*` file). All design tokens are CSS custom properties defined in `src/styles/global.css`.
 
@@ -61,4 +61,4 @@ Follows the same patterns as `seahawk/docs/MULTI-AGENT.md`. For this repo the pa
 
 - API route `/api/invite`: honeypot check before Zod parse. No PII in logs. Rate limiting via Vercel edge middleware.
 - No email addresses in URLs or log output.
-- `RESEND_API_KEY` must never be committed. It lives in `.env.local` (gitignored) and Vercel environment variables.
+- `RESEND_API_KEY` must never be committed. It lives in `.env.local` (gitignored) and Railway environment variables.
