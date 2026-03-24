@@ -1,0 +1,129 @@
+---
+import Button from './ui/Button.astro';
+---
+
+<div class="hero-wrapper">
+  <!-- Minimal nav -->
+  <nav class="nav-bar">
+    <span class="wordmark">SoNoted</span>
+    <Button href="#invite" variant="primary">Get early access</Button>
+  </nav>
+
+  <!-- Hero content -->
+  <div class="hero-content">
+    <!-- Ambient glow -->
+    <div class="glow" aria-hidden="true"></div>
+
+    <h1 class="headline">Every note,<br />finally connected.</h1>
+    <p class="subhead">SoNoted uses AI to surface and activate everything you've ever written.</p>
+    <div class="cta">
+      <Button href="#invite" variant="primary">Get early access</Button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .hero-wrapper {
+    position: relative;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-base);
+    overflow: hidden;
+  }
+
+  /* Nav */
+  .nav-bar {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .nav-bar {
+      padding: 1.75rem 2rem;
+    }
+  }
+
+  .wordmark {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--color-text-primary);
+    letter-spacing: -0.02em;
+  }
+
+  /* Ambient glow behind headline */
+  .glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    width: min(700px, 90vw);
+    height: min(700px, 90vw);
+    background: radial-gradient(ellipse at center, var(--color-accent-glow) 0%, transparent 70%);
+    pointer-events: none;
+    border-radius: 50%;
+    filter: blur(40px);
+  }
+
+  /* Hero content */
+  .hero-content {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 1.5rem;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .hero-content {
+      padding: 4rem 2rem;
+    }
+  }
+
+  .headline {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 10vw, 6rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: var(--color-text-primary);
+    margin: 0;
+    max-width: 14ch;
+  }
+
+  @media (min-width: 768px) {
+    .headline {
+      font-size: clamp(4rem, 10vw, 7rem);
+    }
+  }
+
+  .subhead {
+    font-size: 1.125rem;
+    color: var(--color-text-secondary);
+    max-width: 46ch;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  @media (min-width: 768px) {
+    .subhead {
+      font-size: 1.25rem;
+    }
+  }
+
+  .cta {
+    margin-top: 0.5rem;
+  }
+</style>
