@@ -1,0 +1,155 @@
+---
+import Section from './ui/Section.astro';
+import FeatureCard from './ui/FeatureCard.astro';
+---
+
+<Section id="features">
+  <div class="header">
+    <h2 class="heading">Built different.</h2>
+    <p class="subheading">Four things that change how you think.</p>
+  </div>
+
+  <div class="grid">
+    <FeatureCard
+      headline="Knows what you meant"
+      description="Semantic search that understands context, not just keywords."
+    >
+      <svg
+        slot="icon"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <!-- Neural net / connected nodes -->
+        <circle cx="12" cy="5" r="2"></circle>
+        <circle cx="5" cy="17" r="2"></circle>
+        <circle cx="19" cy="17" r="2"></circle>
+        <circle cx="12" cy="13" r="2"></circle>
+        <line x1="12" y1="7" x2="12" y2="11"></line>
+        <line x1="10.3" y1="14.3" x2="6.7" y2="15.7"></line>
+        <line x1="13.7" y1="14.3" x2="17.3" y2="15.7"></line>
+        <line x1="10.8" y1="6.2" x2="6.5" y2="15.2"></line>
+        <line x1="13.2" y1="6.2" x2="17.5" y2="15.2"></line>
+      </svg>
+    </FeatureCard>
+
+    <FeatureCard
+      headline="Connects what you forgot"
+      description="Every note linked to the ideas, people, and projects it belongs with."
+    >
+      <svg
+        slot="icon"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <!-- Link / chain -->
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </FeatureCard>
+
+    <FeatureCard
+      headline="Works with everything you use"
+      description="Bring in notes from anywhere. Your ecosystem, unified."
+    >
+      <svg
+        slot="icon"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <!-- Interlocking circles -->
+        <circle cx="9" cy="12" r="6"></circle>
+        <circle cx="15" cy="12" r="6"></circle>
+      </svg>
+    </FeatureCard>
+
+    <FeatureCard
+      headline="Yours, always"
+      description="Your data, your exports, your control. No lock-in."
+    >
+      <svg
+        slot="icon"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <!-- Shield -->
+        <path d="M12 2L4 6v6c0 5.25 3.5 9.74 8 11 4.5-1.26 8-5.75 8-11V6l-8-4z"></path>
+        <polyline points="9 12 11 14 15 10"></polyline>
+      </svg>
+    </FeatureCard>
+  </div>
+</Section>
+
+<style>
+  .header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .heading {
+    font-family: var(--font-display);
+    font-size: 1.875rem;
+    font-weight: 800;
+    color: var(--color-text-primary);
+    letter-spacing: -0.02em;
+    margin: 0 0 0.75rem;
+  }
+
+  @media (min-width: 768px) {
+    .heading {
+      font-size: 2.25rem;
+    }
+  }
+
+  .subheading {
+    font-size: 1.0625rem;
+    color: var(--color-text-secondary);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+</style>
