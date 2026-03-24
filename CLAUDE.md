@@ -19,6 +19,7 @@ pnpm dev
 ## Commit Gate
 
 Before every commit:
+
 1. `/simplify`
 2. `pnpm lint`
 3. `pnpm typecheck`
@@ -54,6 +55,7 @@ src/
 ## Multi-Agent Workflow
 
 Follows the same patterns as `seahawk/docs/MULTI-AGENT.md`. For this repo the parallel split is:
+
 - Design system + Hero (#2, #3) in parallel with Invite form + API route (#5, #6)
 - Domain config (#7) is independent infrastructure
 
