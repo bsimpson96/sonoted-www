@@ -4,9 +4,21 @@ const year = new Date().getFullYear();
 
 <footer class="footer">
   <div class="inner">
-    <span class="copy">&copy; {year} SoNoted. All rights reserved.</span>
-    <nav class="links" aria-label="Footer">
-      <a href="/privacy">Privacy Policy</a>
+    <div class="brand">
+      <a href="/" class="wordmark">SoNoted</a>
+      <span class="copy">&copy; {year} SoNoted. All rights reserved.</span>
+    </div>
+    <nav class="link-groups" aria-label="Footer">
+      <div class="link-group">
+        <div class="link-group-label">Product</div>
+        <a href="/how-it-works">How it works</a>
+        <a href="/finance">For finance</a>
+        <a href="/privacy">Privacy & security</a>
+      </div>
+      <div class="link-group">
+        <div class="link-group-label">Legal</div>
+        <a href="/privacy-policy">Privacy policy</a>
+      </div>
     </nav>
   </div>
 </footer>
@@ -14,7 +26,7 @@ const year = new Date().getFullYear();
 <style>
   .footer {
     border-top: 1px solid var(--color-border);
-    padding: 2rem 1.5rem;
+    padding: 3rem 1.5rem;
   }
 
   .inner {
@@ -22,36 +34,65 @@ const year = new Date().getFullYear();
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 0.75rem;
-    text-align: center;
+    gap: 2.5rem;
   }
 
-  @media (min-width: 640px) {
+  @media (min-width: 768px) {
     .inner {
       flex-direction: row;
       justify-content: space-between;
-      text-align: left;
+      align-items: flex-start;
     }
   }
 
-  .copy {
-    font-size: 0.875rem;
-    color: var(--color-text-muted);
-  }
-
-  .links {
+  .brand {
     display: flex;
-    gap: 1.5rem;
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
-  .links a {
-    font-size: 0.875rem;
+  .wordmark {
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    font-weight: 800;
+    color: var(--color-text-primary);
+    letter-spacing: -0.02em;
+    text-decoration: none;
+  }
+
+  .copy {
+    font-size: 0.8125rem;
     color: var(--color-text-muted);
+  }
+
+  .link-groups {
+    display: flex;
+    gap: 3rem;
+  }
+
+  .link-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+
+  .link-group-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+  }
+
+  .link-group a {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    text-decoration: none;
     transition: color 150ms ease;
   }
 
-  .links a:hover {
-    color: var(--color-text-secondary);
+  .link-group a:hover {
+    color: var(--color-text-primary);
   }
 </style>

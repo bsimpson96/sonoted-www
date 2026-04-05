@@ -1,0 +1,545 @@
+---
+import Base from '../layouts/Base.astro';
+import Button from '../components/ui/Button.astro';
+import Section from '../components/ui/Section.astro';
+import { InviteSection } from '../components/InviteSection';
+---
+
+<Base
+  title="SoNoted for Finance — Every note, finally searchable."
+  description="Built for PE firms, RIAs, and regulated professionals who can't afford to lose a note. Your data stays yours."
+>
+  <!-- Hero -->
+  <div class="hero-wrapper">
+    <nav class="nav-bar">
+      <a href="/" class="wordmark">SoNoted</a>
+      <Button href="#invite" variant="primary">Get early access</Button>
+    </nav>
+
+    <div class="hero-content">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="eyebrow">For financial professionals</div>
+      <h1 class="headline">You took the notes.<br />Now find them.</h1>
+      <p class="subhead">
+        Board prep, deal memos, LP calls, advisor conversations. SoNoted surfaces everything you
+        need before you walk in the room — without you having to remember where you put it.
+      </p>
+      <div class="cta">
+        <Button href="#invite" variant="primary">Get early access</Button>
+      </div>
+      <p class="trust-signal">Your notes never leave your control. Bring your own AI key.</p>
+    </div>
+  </div>
+
+  <!-- Pain section -->
+  <Section id="pain">
+    <div class="pain-grid">
+      <div class="pain-header">
+        <h2 class="pain-heading">The notes are there.<br />Getting to them isn't.</h2>
+        <p class="pain-sub">
+          You're meticulous. You take notes on every call, every meeting, every portco update. The
+          problem isn't that you don't capture things. The problem is that captured doesn't mean
+          findable.
+        </p>
+      </div>
+      <div class="pain-points">
+        <div class="pain-point">
+          <div class="pain-label">Before a board call</div>
+          <p class="pain-body">
+            You have 20 minutes. Somewhere across three apps are the notes from the last two
+            quarters. You skim, you ctrl+F, you give up and go in with half the picture.
+          </p>
+        </div>
+        <div class="pain-point">
+          <div class="pain-label">On a new deal</div>
+          <p class="pain-body">
+            You've met this founder before. Or someone from their team. Or their competitor. You know
+            you have something relevant. You can't find it in time to use it.
+          </p>
+        </div>
+        <div class="pain-point">
+          <div class="pain-label">When compliance asks</div>
+          <p class="pain-body">
+            "Produce your notes on that meeting." You know you took them. Now you're reconstructing
+            from memory because the original is buried in a folder you named something clever in
+            2023.
+          </p>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <!-- How it helps -->
+  <Section id="solution">
+    <div class="section-header">
+      <h2 class="section-heading">SoNoted fixes this.</h2>
+      <p class="section-sub">Not by changing how you work. By making everything you've already written finally useful.</p>
+    </div>
+    <div class="solution-grid">
+      <div class="solution-card">
+        <div class="solution-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            <line x1="11" y1="8" x2="11" y2="14"></line>
+            <line x1="8" y1="11" x2="14" y2="11"></line>
+          </svg>
+        </div>
+        <h3 class="solution-headline">Ask, don't search</h3>
+        <p class="solution-body">
+          Type a question in plain English. Get the relevant notes back -- even if you took them
+          three years ago in a different app and called the file something forgettable.
+        </p>
+      </div>
+      <div class="solution-card">
+        <div class="solution-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+          </svg>
+        </div>
+        <h3 class="solution-headline">Everything, connected</h3>
+        <p class="solution-body">
+          Notes from your portco calls, linked to the deal memo, linked to the LP update where you
+          mentioned the same concern. SoNoted sees the thread you forgot you were pulling.
+        </p>
+      </div>
+      <div class="solution-card">
+        <div class="solution-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L4 6v6c0 5.25 3.5 9.74 8 11 4.5-1.26 8-5.75 8-11V6l-8-4z"></path>
+            <polyline points="9 12 11 14 15 10"></polyline>
+          </svg>
+        </div>
+        <h3 class="solution-headline">Your data. Full stop.</h3>
+        <p class="solution-body">
+          Bring your own AI key. Your notes are never used to train models -- ours or anyone
+          else's. What happens in your notes stays in your notes. That's not a feature. That's the
+          foundation.
+        </p>
+      </div>
+    </div>
+  </Section>
+
+  <!-- Use cases -->
+  <Section id="use-cases">
+    <div class="section-header">
+      <h2 class="section-heading">What it looks like in practice.</h2>
+    </div>
+    <div class="cases">
+      <div class="case">
+        <div class="case-label">Board call in 20 minutes</div>
+        <p class="case-body">
+          Ask SoNoted everything you've noted about the company. It pulls the last four quarters of
+          observations, the concern you flagged in March, the metric their CEO mentioned offhand in
+          August. You walk in sharp.
+        </p>
+      </div>
+      <div class="case">
+        <div class="case-label">New deal, familiar territory</div>
+        <p class="case-body">
+          You've seen this space before. SoNoted surfaces everything you wrote about the category,
+          the competitors you passed on, the thesis you formed two years ago. Your pattern
+          recognition, activated.
+        </p>
+      </div>
+      <div class="case">
+        <div class="case-label">Compliance, without the panic</div>
+        <p class="case-body">
+          When you need to produce notes on a meeting, conversation, or decision -- they're there.
+          Searchable, attributable, and exactly where they should be.
+        </p>
+      </div>
+    </div>
+  </Section>
+
+  <!-- Trust bar -->
+  <Section id="trust">
+    <div class="trust-section">
+      <h2 class="trust-heading">Built for people who can't afford to be careless with data.</h2>
+      <div class="trust-points">
+        <div class="trust-point">
+          <div class="trust-check" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <span>Bring your own AI key -- your notes never touch our AI layer</span>
+        </div>
+        <div class="trust-point">
+          <div class="trust-check" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <span>Your notes never train anyone's model</span>
+        </div>
+        <div class="trust-point">
+          <div class="trust-check" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <span>Your data is portable and yours to export</span>
+        </div>
+        <div class="trust-point">
+          <div class="trust-check" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <span>No tracking pixels. No third-party analytics.</span>
+        </div>
+      </div>
+      <div class="trust-cta">
+        <Button href="/privacy" variant="ghost">Read our privacy commitment</Button>
+      </div>
+    </div>
+  </Section>
+
+  <!-- Invite -->
+  <section class="px-4 py-24">
+    <InviteSection client:load />
+  </section>
+</Base>
+
+<style>
+  .hero-wrapper {
+    position: relative;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-base);
+    overflow: hidden;
+  }
+
+  .nav-bar {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .nav-bar {
+      padding: 1.75rem 2rem;
+    }
+  }
+
+  .wordmark {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--color-text-primary);
+    letter-spacing: -0.02em;
+  }
+
+  .glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    width: min(700px, 90vw);
+    height: min(700px, 90vw);
+    background: radial-gradient(ellipse at center, var(--color-accent-glow) 0%, transparent 70%);
+    pointer-events: none;
+    border-radius: 50%;
+    filter: blur(40px);
+  }
+
+  .hero-content {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .eyebrow {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .headline {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 10vw, 6rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: var(--color-text-primary);
+    margin: 0;
+    max-width: 14ch;
+  }
+
+  @media (min-width: 768px) {
+    .headline {
+      font-size: clamp(4rem, 10vw, 7rem);
+    }
+  }
+
+  .subhead {
+    font-size: 1.125rem;
+    color: var(--color-text-secondary);
+    max-width: 48ch;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  @media (min-width: 768px) {
+    .subhead {
+      font-size: 1.25rem;
+    }
+  }
+
+  .cta {
+    margin-top: 0.5rem;
+  }
+
+  .trust-signal {
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+    margin: 0;
+    letter-spacing: 0.01em;
+  }
+
+  /* Pain section */
+  .pain-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  @media (min-width: 1024px) {
+    .pain-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+  }
+
+  .pain-heading {
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 800;
+    color: var(--color-text-primary);
+    letter-spacing: -0.02em;
+    margin: 0 0 1rem;
+    line-height: 1.1;
+  }
+
+  .pain-sub {
+    font-size: 1.0625rem;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    margin: 0;
+    max-width: 44ch;
+  }
+
+  .pain-points {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .pain-point {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+  }
+
+  .pain-label {
+    font-family: var(--font-display);
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-bottom: 0.5rem;
+  }
+
+  .pain-body {
+    font-size: 0.9375rem;
+    color: var(--color-text-secondary);
+    margin: 0;
+    line-height: 1.7;
+  }
+
+  /* Solution section */
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .section-heading {
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    font-weight: 800;
+    color: var(--color-text-primary);
+    letter-spacing: -0.02em;
+    margin: 0 0 0.75rem;
+  }
+
+  .section-sub {
+    font-size: 1.0625rem;
+    color: var(--color-text-secondary);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .solution-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    .solution-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .solution-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 0.75rem;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .solution-icon {
+    color: var(--color-accent);
+  }
+
+  .solution-headline {
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+
+  .solution-body {
+    font-size: 0.9375rem;
+    color: var(--color-text-secondary);
+    margin: 0;
+    line-height: 1.7;
+  }
+
+  /* Use cases */
+  .cases {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .cases {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .case {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 0.75rem;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+    transition:
+      border-color 200ms ease,
+      box-shadow 200ms ease;
+  }
+
+  .case:hover {
+    border-color: var(--color-accent);
+    box-shadow: 0 8px 32px var(--color-accent-glow);
+  }
+
+  .case-label {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    letter-spacing: -0.01em;
+  }
+
+  .case-body {
+    font-size: 0.9375rem;
+    color: var(--color-text-secondary);
+    margin: 0;
+    line-height: 1.7;
+  }
+
+  /* Trust section */
+  .trust-section {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    padding: 3rem 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .trust-heading {
+    font-family: var(--font-display);
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    font-weight: 800;
+    color: var(--color-text-primary);
+    letter-spacing: -0.02em;
+    margin: 0;
+    max-width: 40ch;
+  }
+
+  .trust-points {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+    align-items: flex-start;
+  }
+
+  @media (min-width: 640px) {
+    .trust-points {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.875rem 3rem;
+    }
+  }
+
+  .trust-point {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.9375rem;
+    color: var(--color-text-secondary);
+    text-align: left;
+  }
+
+  .trust-check {
+    flex-shrink: 0;
+    color: var(--color-accent);
+  }
+
+  .trust-cta {
+    margin-top: 0.5rem;
+  }
+</style>

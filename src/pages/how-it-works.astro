@@ -1,0 +1,415 @@
+---
+import Base from '../layouts/Base.astro';
+import Button from '../components/ui/Button.astro';
+import Section from '../components/ui/Section.astro';
+import { InviteSection } from '../components/InviteSection';
+---
+
+<Base
+  title="How SoNoted Works — Every note, finally connected."
+  description="Bring in your notes from anywhere. Ask questions in plain English. SoNoted surfaces what you need, when you need it."
+>
+  <!-- Header -->
+  <div class="page-header">
+    <nav class="nav-bar">
+      <a href="/" class="wordmark">SoNoted</a>
+      <Button href="/#invite" variant="primary">Get early access</Button>
+    </nav>
+
+    <div class="header-content">
+      <div class="glow" aria-hidden="true"></div>
+      <h1 class="headline">Simple idea.<br />Took a while to get right.</h1>
+      <p class="subhead">
+        Your notes are scattered. SoNoted pulls them together, understands what they mean, and
+        surfaces them when you actually need them.
+      </p>
+    </div>
+  </div>
+
+  <!-- Steps -->
+  <Section id="steps">
+    <div class="steps">
+      <div class="step">
+        <div class="step-number" aria-hidden="true">01</div>
+        <div class="step-content">
+          <h2 class="step-heading">Bring in everything you've written.</h2>
+          <p class="step-body">
+            Notes from Notion. Obsidian vaults. Apple Notes. Plain markdown files. Voice memos you
+            transcribed. Meeting notes you pasted into a doc. Whatever you use, bring it in.
+          </p>
+          <p class="step-body">
+            You don't have to change how you work. SoNoted meets your notes where they are.
+          </p>
+          <div class="step-detail">
+            <div class="step-detail-label">Supported sources (expanding)</div>
+            <div class="step-tags">
+              <span class="tag">Notion</span>
+              <span class="tag">Obsidian</span>
+              <span class="tag">Apple Notes</span>
+              <span class="tag">Markdown files</span>
+              <span class="tag">Plain text</span>
+              <span class="tag">More coming</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-divider" aria-hidden="true"></div>
+
+      <div class="step">
+        <div class="step-number" aria-hidden="true">02</div>
+        <div class="step-content">
+          <h2 class="step-heading">SoNoted builds a semantic index of your thinking.</h2>
+          <p class="step-body">
+            Not just keywords. Meaning. SoNoted reads your notes and understands what they're
+            about -- the ideas, the people, the context. Then it builds a map of how everything
+            connects.
+          </p>
+          <p class="step-body">
+            The meeting where someone mentioned a budget concern. The research note from 2022 that
+            turned out to be relevant. The half-finished idea that belongs next to the project you
+            started last month. SoNoted finds those threads.
+          </p>
+        </div>
+      </div>
+
+      <div class="step-divider" aria-hidden="true"></div>
+
+      <div class="step">
+        <div class="step-number" aria-hidden="true">03</div>
+        <div class="step-content">
+          <h2 class="step-heading">Ask. Get answers from your own notes.</h2>
+          <p class="step-body">
+            Type a question in plain English. SoNoted finds the relevant notes -- not the
+            internet's take on your question, but what you actually wrote about it. Then it
+            synthesizes an answer and shows you exactly which notes it drew from.
+          </p>
+          <p class="step-body">
+            You can also browse connections, surface related notes you forgot existed, and pull
+            everything you've written about a person, project, or topic in one place.
+          </p>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <!-- What it's not -->
+  <Section id="not">
+    <div class="not-section">
+      <div class="not-header">
+        <h2 class="not-heading">What SoNoted is not.</h2>
+        <p class="not-sub">Worth being clear about.</p>
+      </div>
+      <div class="not-grid">
+        <div class="not-item">
+          <div class="not-label">Not another notes app</div>
+          <p class="not-body">
+            You don't write in SoNoted. You write wherever you already write. SoNoted is what
+            happens to those notes after you write them.
+          </p>
+        </div>
+        <div class="not-item">
+          <div class="not-label">Not a chatbot that guesses</div>
+          <p class="not-body">
+            When SoNoted answers a question, it's drawing from your notes -- not making things
+            up, not pulling from the internet. If the answer isn't in your notes, it tells you.
+          </p>
+        </div>
+        <div class="not-item">
+          <div class="not-label">Not something that learns from your data</div>
+          <p class="not-body">
+            Your notes are used to serve you. That's it. SoNoted doesn't train on them, doesn't
+            use them to improve its models, and doesn't share them with anyone.
+          </p>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <!-- Bridge to finance -->
+  <Section id="for-finance">
+    <div class="callout">
+      <div class="callout-content">
+        <h2 class="callout-heading">Using this in a regulated environment?</h2>
+        <p class="callout-body">
+          We built SoNoted with PE firms, RIAs, and compliance teams in mind. See how it fits.
+        </p>
+        <Button href="/finance" variant="ghost">SoNoted for finance</Button>
+      </div>
+    </div>
+  </Section>
+
+  <!-- Invite -->
+  <section class="px-4 py-24">
+    <InviteSection client:load />
+  </section>
+</Base>
+
+<style>
+  .page-header {
+    position: relative;
+    min-height: 60dvh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-base);
+    overflow: hidden;
+  }
+
+  .nav-bar {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .nav-bar {
+      padding: 1.75rem 2rem;
+    }
+  }
+
+  .wordmark {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--color-text-primary);
+    letter-spacing: -0.02em;
+  }
+
+  .glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    width: min(600px, 90vw);
+    height: min(600px, 90vw);
+    background: radial-gradient(ellipse at center, var(--color-accent-glow) 0%, transparent 70%);
+    pointer-events: none;
+    border-radius: 50%;
+    filter: blur(40px);
+  }
+
+  .header-content {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .headline {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: var(--color-text-primary);
+    margin: 0;
+    max-width: 16ch;
+  }
+
+  .subhead {
+    font-size: 1.125rem;
+    color: var(--color-text-secondary);
+    max-width: 48ch;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  /* Steps */
+  .steps {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .step {
+    display: grid;
+    grid-template-columns: 4rem 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  @media (max-width: 640px) {
+    .step {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .step-number {
+    font-family: var(--font-display);
+    font-size: 0.8125rem;
+    font-weight: 800;
+    color: var(--color-accent);
+    letter-spacing: 0.06em;
+    padding-top: 0.375rem;
+  }
+
+  .step-content {
+    padding-bottom: 3rem;
+  }
+
+  .step-heading {
+    font-family: var(--font-display);
+    font-size: clamp(1.375rem, 3vw, 1.75rem);
+    font-weight: 800;
+    color: var(--color-text-primary);
+    letter-spacing: -0.02em;
+    margin: 0 0 1.25rem;
+    line-height: 1.15;
+  }
+
+  .step-body {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    line-height: 1.75;
+    margin: 0 0 1rem;
+  }
+
+  .step-detail {
+    margin-top: 1.5rem;
+  }
+
+  .step-detail-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+
+  .step-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tag {
+    font-size: 0.8125rem;
+    color: var(--color-text-secondary);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 0.375rem;
+    padding: 0.25rem 0.625rem;
+  }
+
+  .step-divider {
+    height: 1px;
+    background: linear-gradient(to right, var(--color-accent-glow), transparent);
+    margin: 0 0 3rem 6rem;
+  }
+
+  @media (max-width: 640px) {
+    .step-divider {
+      margin-left: 0;
+    }
+  }
+
+  /* Not section */
+  .not-section {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .not-header {
+    margin-bottom: 3rem;
+  }
+
+  .not-heading {
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    font-weight: 800;
+    color: var(--color-text-primary);
+    letter-spacing: -0.02em;
+    margin: 0 0 0.5rem;
+  }
+
+  .not-sub {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .not-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    .not-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .not-item {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 0.75rem;
+    padding: 1.75rem;
+  }
+
+  .not-label {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.01em;
+  }
+
+  .not-body {
+    font-size: 0.9375rem;
+    color: var(--color-text-secondary);
+    margin: 0;
+    line-height: 1.7;
+  }
+
+  /* Callout */
+  .callout {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    padding: 3rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .callout-content {
+    max-width: 48ch;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .callout-heading {
+    font-family: var(--font-display);
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    font-weight: 800;
+    color: var(--color-text-primary);
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+
+  .callout-body {
+    font-size: 0.9375rem;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    margin: 0;
+  }
+</style>

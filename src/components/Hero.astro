@@ -3,9 +3,14 @@ import Button from './ui/Button.astro';
 ---
 
 <div class="hero-wrapper">
-  <!-- Minimal nav -->
+  <!-- Nav -->
   <nav class="nav-bar">
-    <span class="wordmark">SoNoted</span>
+    <a href="/" class="wordmark">SoNoted</a>
+    <div class="nav-links">
+      <a href="/how-it-works" class="nav-link">How it works</a>
+      <a href="/finance" class="nav-link">For finance</a>
+      <a href="/privacy" class="nav-link">Privacy</a>
+    </div>
     <Button href="#invite" variant="primary">Get early access</Button>
   </nav>
 
@@ -58,6 +63,31 @@ import Button from './ui/Button.astro';
     font-weight: 800;
     color: var(--color-text-primary);
     letter-spacing: -0.02em;
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: none;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .nav-links {
+      display: flex;
+    }
+  }
+
+  .nav-link {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: color 150ms ease;
+  }
+
+  .nav-link:hover {
+    color: var(--color-text-primary);
   }
 
   /* Ambient glow behind headline */
