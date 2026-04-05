@@ -70,10 +70,10 @@ export function InviteSection() {
             style={{ color: 'var(--color-text-primary)', fontFamily: 'var(--font-display)' }}
             className="mb-3 text-4xl font-extrabold tracking-tight"
           >
-            Early access, limited.
+            Get in early.
           </h2>
           <p style={{ color: 'var(--color-text-secondary)' }} className="mb-8 text-lg">
-            Something worth waiting for. Leave your email and we&apos;ll find you.
+            We&apos;re onboarding early users in small batches. Drop your email and we&apos;ll reach out when your spot opens.
           </p>
 
           <form onSubmit={handleSubmit} noValidate className="flex flex-col items-center gap-3">
@@ -116,7 +116,7 @@ export function InviteSection() {
                 }}
                 className="rounded-lg px-6 py-3 text-sm font-semibold transition-opacity hover:opacity-90 disabled:opacity-50"
               >
-                {formState === 'submitting' ? 'Joining...' : 'Join waitlist'}
+                {formState === 'submitting' ? 'Requesting...' : 'Request early access'}
               </button>
             </div>
 

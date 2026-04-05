@@ -6,7 +6,7 @@ import FeatureCard from './ui/FeatureCard.astro';
 <Section id="features">
   <div class="header">
     <h2 class="heading">Built different.</h2>
-    <p class="subheading">Four things that change how you think.</p>
+    <p class="subheading">Not another place to store notes. A way to make them work.</p>
   </div>
 
   <div class="grid">
@@ -36,6 +36,28 @@ import FeatureCard from './ui/FeatureCard.astro';
         <line x1="13.7" y1="14.3" x2="17.3" y2="15.7"></line>
         <line x1="10.8" y1="6.2" x2="6.5" y2="15.2"></line>
         <line x1="13.2" y1="6.2" x2="17.5" y2="15.2"></line>
+      </svg>
+    </FeatureCard>
+
+    <FeatureCard
+      headline="Your AI. Your data. Nobody else's."
+      description="Bring your own AI key. Your notes never train anyone else's model. Your intelligence stays yours — private, portable, and under your control."
+    >
+      <svg
+        slot="icon"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <!-- Shield -->
+        <path d="M12 2L4 6v6c0 5.25 3.5 9.74 8 11 4.5-1.26 8-5.75 8-11V6l-8-4z"></path>
+        <polyline points="9 12 11 14 15 10"></polyline>
       </svg>
     </FeatureCard>
 
@@ -80,28 +102,6 @@ import FeatureCard from './ui/FeatureCard.astro';
         <!-- Interlocking circles -->
         <circle cx="9" cy="12" r="6"></circle>
         <circle cx="15" cy="12" r="6"></circle>
-      </svg>
-    </FeatureCard>
-
-    <FeatureCard
-      headline="Your AI. Your data. Nobody else's."
-      description="Bring your own AI key. Your notes never train anyone else's model. Your intelligence stays yours — private, portable, and under your control."
-    >
-      <svg
-        slot="icon"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        aria-hidden="true"
-      >
-        <!-- Shield -->
-        <path d="M12 2L4 6v6c0 5.25 3.5 9.74 8 11 4.5-1.26 8-5.75 8-11V6l-8-4z"></path>
-        <polyline points="9 12 11 14 15 10"></polyline>
       </svg>
     </FeatureCard>
   </div>
