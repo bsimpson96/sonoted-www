@@ -26,6 +26,20 @@ import { InviteSection } from '../components/InviteSection';
     </div>
   </div>
 
+  <!-- Explainer video -->
+  <Section id="video">
+    <div class="video-wrapper">
+      <video
+        src="/assets/sonoted-explainer.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+        class="explainer-video"
+      ></video>
+    </div>
+  </Section>
+
   <!-- Steps -->
   <Section id="steps">
     <div class="steps">
@@ -223,6 +237,21 @@ import { InviteSection } from '../components/InviteSection';
     max-width: 48ch;
     margin: 0;
     line-height: 1.6;
+  }
+
+  /* Video */
+  .video-wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    background: #000;
+  }
+
+  .explainer-video {
+    width: 100%;
+    display: block;
   }
 
   /* Steps */
